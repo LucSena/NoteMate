@@ -2,7 +2,7 @@ import { Note, Notepad, House, Browsers, CalendarDots, Star, CheckSquare, Trash 
 
 export function Sidebar() {
     return (
-        <aside className="w-64 text-black p-4 border-r border-gray-200">
+        <aside className="w-72 text-black p-4 border-r border-gray-200">
             <h1 className="text-2xl font-bold md:pl-4 md:pt-4 flex items-center text-indigo-700">
                 <Notepad size={26} />
                 NoteMate
