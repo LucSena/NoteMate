@@ -23,7 +23,6 @@ export function Main() {
                     </div>
                 </div>
 
-                {/* Ajuste a propriedade gap para reduzir o espaçamento vertical e horizontal */}
                 <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-4 w-full max-h-[calc(100vh-12rem)] overflow-y-auto">
                     <div className="bg-white border border-gray-200 rounded-lg flex flex-col h-80">
                         <div className="flex justify-between">
@@ -175,15 +174,135 @@ export function Main() {
 
 
             <div className="flex flex-col w-full md:w-3/5 ml-4">
-                <div className="w-full h-2/3 bg-white border border-gray-200 rounded-lg mb-4 flex justify-between">
-                    <h1 className="p-5 font-semibold text-lg">Checklist</h1>
-                    <div className="flex">
-                        <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
-                            <FolderSimplePlus  size={24} />
-                        </a>
-                        <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
-                            <DotsThreeVertical size={24} weight="bold" />
-                        </a>
+                <div className="w-full h-2/3 bg-white border border-gray-200 rounded-lg mb-4">
+                    <div className="flex justify-between">
+                        <h1 className="p-5 font-semibold text-lg">Checklist</h1>
+                        <div className="flex">
+                            <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
+                                <FolderSimplePlus  size={24} />
+                            </a>
+                            <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
+                                <DotsThreeVertical size={24} weight="bold" />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* AQUI SÓ TEMOS 3 CARDS POR LINHA, CASO TENHA MAIS, IRÁ SCROLLAR PARA O LADO, NÃO TEMOS MAIS DE 1 LINHA*/}
+                    <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-h-[calc(100vh-12rem)] overflow-x-auto">
+                        <div className="bg-white border border-gray-200 rounded-lg flex flex-col h-80">
+                            <div className="flex justify-between">
+                                <h1 className="p-5 font-semibold text-lg">Fazer compras 🛒</h1>
+                                <div className="flex justify-end p-5">
+                                    <a href="#" className="hover:text-indigo-700">
+                                        <DotsThreeVertical size={24} weight="bold" />
+                                    </a>
+                                </div>
+                            </div>
+
+                             {/* Adicione inputs de checkbox com o conteúdo da anotação */}
+                            <div className="pl-5 text-gray-500">
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item1" name="item1" value="item1" />
+                                    <label htmlFor="item1" className="pl-1">Comprar arroz</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item2" name="item2" value="item2" />
+                                    <label htmlFor="item2" className="pl-1">Comprar feijão</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item3" name="item3" value="item3" />
+                                    <label htmlFor="item3" className="pl-1">Comprar carne</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item4" name="item4" value="item4" />
+                                    <label htmlFor="item4" className="pl-1">Comprar frutas</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item5" name="item5" value="item5" />
+                                    <label htmlFor="item5" className="pl-1">Comprar verduras</label>
+                                </div>
+                            </div>
+
+                            <div className="p-4 px-6 flex justify-between mt-auto">
+                                <div className="flex items-center border border-red-700 bg-red-200 text-red-700 rounded p-1 px-2">
+                                    <span className="text-sm">Casa</span>
+                                </div>
+
+                                <span className="text-gray-500 pt-1">11 Sept</span>
+                            </div>
+                        </div>
+
+                        <div className="bg-white border border-gray-200 rounded-lg flex flex-col h-80">
+                            <div className="flex justify-between">
+                                <h1 className="p-5 font-semibold text-lg">Conteudos da prova 📚</h1>
+                                <div className="flex justify-end p-5">
+                                    <a href="#" className="hover:text-indigo-700">
+                                        <DotsThreeVertical size={24} weight="bold" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="pl-5 text-gray-500">
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item6" name="item6" value="item6" />
+                                    <label htmlFor="item6" className="pl-1">Estudar matemática</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item7" name="item7" value="item7" />
+                                    <label htmlFor="item7" className="pl-1">Estudar ciências</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item8" name="item8" value="item8" />
+                                    <label htmlFor="item8" className="pl-1">Estudar história</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item9" name="item9" value="item9" />
+                                    <label htmlFor="item9" className="pl-1">Estudar geografia</label>
+                                </div>
+                            </div>
+
+                            <div className="p-4 px-6 flex justify-between mt-auto">
+                                <div className="flex items-center border border-yellow-700 bg-yellow-200 text-yellow-700 rounded p-1 px-2">
+                                    <span className="text-sm">Escola</span>
+                                </div>
+
+                                <span className="text-gray-500 pt-1">08 Sept</span>
+                            </div>
+                        </div>
+
+                        <div className="bg-white border border-gray-200 rounded-lg flex flex-col h-80">
+                            <div className="flex justify-between">
+                                <h1 className="p-5 font-semibold text-lg">Sprint 🚀</h1>
+                                <div className="flex justify-end p-5">
+                                    <a href="#" className="hover:text-indigo-700">
+                                        <DotsThreeVertical size={24} weight="bold" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="pl-5 text-gray-500">
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item10" name="item10" value="item10" />
+                                    <label htmlFor="item10" className="pl-1">Definir tarefas</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item11" name="item11" value="item11" />
+                                    <label htmlFor="item11" className="pl-1">Definir metas</label>
+                                </div>
+                                <div className="flex items-center pb-2">
+                                    <input type="checkbox" id="item12" name="item12" value="item12" />
+                                    <label htmlFor="item12" className="pl-1">Definir prazos</label>
+                                </div>
+                            </div>
+
+                            <div className="p-4 px-6 flex justify-between mt-auto">
+                                <div className="flex items-center border border-blue-700 bg-blue-200 text-blue-700 rounded p-1 px-2">
+                                    <span className="text-sm">Trabalho</span>
+                                </div>
+
+                                <span className="text-gray-500 pt-1">07 Sept</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
