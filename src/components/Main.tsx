@@ -1,4 +1,4 @@
-import { PlusSquare, DotsThreeVertical, FolderSimplePlus } from "@phosphor-icons/react/dist/ssr";
+import { PlusSquare, DotsThreeVertical, FolderSimplePlus, ArrowSquareLeft, ArrowSquareRight } from "@phosphor-icons/react/dist/ssr";
 
 export function Main() {
     return (
@@ -160,7 +160,7 @@ export function Main() {
                         </p>
 
                         <div className="p-4 px-6 flex justify-between mt-auto">
-                            <div className="flex items-center border border-purple-700 bg-purple-200 text-purple-700 rounded p-1 px-2">
+                            <div className="flex items-center border border-purple-700 bg-blue-200 text-purple-700 rounded p-1 px-2">
                                 <span className="text-sm">Pessoal</span>
                             </div>
 
@@ -278,7 +278,7 @@ export function Main() {
                                         <DotsThreeVertical size={24} weight="bold" />
                                     </a>
                                 </div>
-                            </div>
+                            </div> 
 
                             <div className="pl-5 text-gray-500">
                                 <div className="flex items-center pb-2">
@@ -307,7 +307,8 @@ export function Main() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full h-full">
-                    <div className="bg-white border border-gray-200 rounded-lg flex justify-between">
+                <div className="bg-white border border-gray-200 rounded-lg">
+                    <div className="flex justify-between">
                         <h1 className="p-5 font-semibold text-lg">Calendario</h1>
                         <div className="flex">
                             <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
@@ -315,15 +316,133 @@ export function Main() {
                             </a>
                         </div>
                     </div>
-
-                    <div className="bg-white border border-gray-200 rounded-lg flex justify-between">
-                        <h1 className="p-5 font-semibold text-lg">Draft Pad</h1>
+                    <div className="p-5 px-2 pt-0 flex justify-between items-center">
+                        <select className="border border-gray-200 rounded-lg p-1 w-4/12">
+                            <option value="January">Janeiro</option>
+                            <option value="February">Fevereiro</option>
+                            <option value="March">Março</option>
+                            <option value="April">Abril</option>
+                            <option value="May">Maio</option>
+                        </select>
                         <div className="flex">
-                            <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
-                                <DotsThreeVertical size={24} weight="bold" />
-                            </a>
+                            <button className="mr-2 hover:bg-gray-200 p-1 rounded">
+                                <ArrowSquareLeft size={24} />
+                            </button>
+                            <button className="hover:bg-gray-200 p-1 rounded">
+                                <ArrowSquareRight size={24} />
+                            </button>
                         </div>
                     </div>
+                    <div className="grid grid-cols-7 p-2">
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Dom </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 11 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group bg-cyan-600 shadow-lg dark-shadow rounded-lg mx-1 cursor-pointer justify-center relative  w-15'>
+                            <span className="flex h-3 w-3 absolute -top-1 -right-1">
+                            <span className="animate-ping absolute group-hover:opacity-75 opacity-0 inline-flex h-full w-full rounded-full bg-blue-400 "></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-400"></span>
+                            </span>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-100 text-sm'> Seg </p>
+                                    <p className='text-gray-100  mt-3 font-bold'> 12 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Ter </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 13 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Qua </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 14 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Qui </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 15 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Sex </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 16 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex group border border-gray-400 hover:bg-blue-500 hover:shadow-lg hover-dark-shadow rounded-lg mx-1 transition-all	duration-300 cursor-pointer justify-center w-15'>
+                            <div className='flex items-center px-4 py-4'>
+                                <div className='text-center'>
+                                    <p className='text-gray-900 group-hover:text-gray-100 text-sm transition-all	duration-300'> Sab </p>
+                                    <p className='text-gray-900 group-hover:text-gray-100 mt-3 group-hover:font-bold transition-all	duration-300'> 17 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-4">
+                        <div className="flex justify-between mb-3">
+                            <div className="flex items-center">
+                                <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                                <span>Evento de Casa</span>
+                            </div>
+
+                            <span className="text-gray-500 pr-3">11:00</span>
+                        </div>
+                        <div className="flex justify-between mb-3">
+                            <div className="flex items-center">
+                                <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                                <span>Encontro com a Namorada</span>
+                            </div>
+
+                            <span className="text-gray-500 pr-3">14:00</span>
+                        </div>
+                        <div className="flex justify-between mb-3">
+                            <div className="flex items-center">
+                                <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                <span>Reunião de Trabalho</span>
+                            </div>
+
+                            <span className="text-gray-500 pr-3">16:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                            <div className="flex items-center">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span>Correr no Parque</span>
+                            </div>
+
+                            <span className="text-gray-500 pr-3">18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                    <div className="bg-amber-100 border border-gray-200 rounded-lg flex flex-col">
+                        <div className="flex justify-between">
+                            <h1 className="p-5 font-semibold text-lg">Draft Pad</h1>
+                            <div className="flex">
+                                <a href="#" className="hover:text-indigo-700 mr-4 mt-4">
+                                    <DotsThreeVertical size={24} weight="bold" />
+                                </a>
+                            </div>
+                        </div>
+                        <textarea className="resize-none bg-amber-100 p-5 pt-1 w-full min-h-0 flex-grow" placeholder="Comece a escrever..."></textarea>
+                    </div>
+
                 </div>
             </div>
         </div>
